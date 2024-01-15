@@ -1,0 +1,108 @@
+#include <stdio.h>
+
+Ex 00:
+
+int main() {
+	
+    int myNumber = 0;
+    printf("Avant: %d\n", myNumber);
+
+    ft_ft(&myNumber);
+
+    printf("Apres: %d\n", myNumber);
+
+    return 0;
+}
+
+Ex01
+
+int main() 
+
+{
+    int myNumber = 0;
+    int *ptr1 = &myNumber;
+    int **ptr2 = &ptr1;
+    int ***ptr3 = &ptr2;
+    int ****ptr4 = &ptr3;
+    int *****ptr5 = &ptr4;
+    int ******ptr6 = &ptr5;
+    int *******ptr7 = &ptr6;
+    int ********ptr8 = &ptr7;
+
+    printf("avant: %d\n", myNumber);
+
+    ft_ultimate_ft(&ptr8);
+
+    printf("apres: %d\n", myNumber);
+
+    return 0;
+}
+
+Ex02
+
+int main() 
+{
+    int x = 5;
+    int y = 10;
+
+    printf("avant: x = %d, y = %d\n", x, y);
+
+    ft_swap(&x, &y);
+
+    printf("apres: x = %d, y = %d\n", x, y);
+
+    return 0;
+}
+
+Ex03
+
+int main() 
+{
+    int premier = 43;
+    int deuxieme = 41;
+    int division, restant;
+
+    ft_div_mod(premier, deuxieme, &division, &restant);
+
+    printf("Division: %d\n", division);
+    printf("Restant: %d\n", restant);
+
+    return 0;
+}
+
+Ex04
+
+int main() 
+{
+    int a = 10;
+    int b = 3;
+
+    printf("Avant: a = %d, b = %d\n", a, b);
+
+    ft_ultimate_div_mod(&a, &b);
+
+    printf("Apres: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+Ex05
+
+int	main(void)
+{
+	char	*str = "rotule";
+	
+	ft_putstr(str);
+	return (0);
+}
+
+Ex06
+
+int main()
+{
+	char	string[] = "rotule";
+	int longeure = ft_strlen(string);
+
+	printf("nombre de characteres: %d\n", longeure);
+	return 0;
+}
