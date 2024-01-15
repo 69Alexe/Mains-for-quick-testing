@@ -106,3 +106,33 @@ int main()
 	printf("nombre de characteres: %d\n", longeure);
 	return 0;
 }
+
+Ex07
+
+int main() 
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+    int size = sizeof(arr) / 4;
+	
+    ft_rev_int_tab(arr, size);
+    for (int n = 0; n < size; n++) {
+        printf("%d ", arr[n]);
+    }
+
+    return 0;
+}
+
+Ex08
+
+int main() 
+{
+    int arr[] = {32424, 31731, 42717, 264528, 136429};
+    int size = sizeof(arr) / 4;
+	
+    ft_sort_int_tab(arr, size);
+    for (int n = 0; n < size; n++) {
+        printf("%d ", arr[n]);
+    }
+
+    return 0;
+}
