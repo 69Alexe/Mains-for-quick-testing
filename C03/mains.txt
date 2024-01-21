@@ -1,0 +1,131 @@
+Ex00:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	
+    char str1[] = "Hello";
+    char str2[] = "He";
+    char str3[] = "World";
+    char str4[] = "Hell";
+    char str5[] = "Hello, World!";
+	
+    int result1 = ft_strcmp(str1, str2);
+    printf("Result 1: %d\n", result1);
+
+	int rezult1 = strcmp(str1, str2);
+    printf("Result 1: %d\n", rezult1);
+
+    int result2 = ft_strcmp(str1, str3);
+    printf("Result 2: %d\n", result2); 
+
+	int rezult2 = strcmp(str1, str3);
+    printf("Result 1: %d\n", rezult2);
+
+    return 0;
+}
+
+Ex01
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[] = "Hello, World!";
+    char str2[] = "Hell, Universe!";
+    
+	int result = ft_strncmp(str1, str2, 4);
+	int result2 = strncmp(str1, str2, 4);
+    printf("Result 1: %d\n", result);
+    printf("Result 1: %d\n", result2);
+	
+    return 0;
+}
+
+Ex02
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char dest[20] = "Rotules, ";
+    char src[] = "Glaciale!";
+    char dest2[20] = "Rotules, ";
+    char src2[] = "Glaciale!";
+	
+    printf("avant: %s\n", dest);
+
+    ft_strcat(dest, src);
+	strcat(dest2, src2);
+
+    printf("apres: %s\n", dest);
+    printf("apres: %s\n", dest2);
+
+    return 0;
+}
+
+Ex03
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char dest[20] = "Rotule, ";
+    char src[] = "Brulante!";
+	char dest2[20] = "Rotule, ";
+    char src2[] = "Brulante!";
+
+    printf("Avant: %s\n", dest);
+
+    ft_strncat(dest, src, 5);
+	strncat(dest2, src2, 5);
+
+    printf("Apres: %s\n", dest);
+    printf("Apres: %s\n", dest2);
+
+    return 0;
+} 
+Ex04
+ int main()
+{
+    const char *haystack = "Hello, World!";
+    const char *needle = "o";
+
+    char *result = strstr(haystack, needle);
+	char *result2 = strstr(haystack, needle);
+
+    if (result != NULL) {
+        printf("'%s' trouver '%s' dans pos %ld\n", needle, haystack, result - haystack);
+    } else {
+        printf("'%s' existe pas dans '%s'\n", needle, haystack);
+    }
+	if (result2 != NULL) {
+        printf("'%s' trouver '%s' dans pos %ld\n", needle, haystack, result2 - haystack);
+    } else {
+        printf("'%s' existe pas dans '%s'\n", needle, haystack);
+    }
+
+    return 0;
+}
+
+Ex05
+
+
+#include <stdio.h>
+
+int main()
+{
+    char dest[20] = "Hello, ";
+    char src[] = "World!";
+
+    unsigned int result = ft_strlcat(dest, src, 12);
+
+    printf("dest apres: %s\n", dest);
+    printf("longeure: %u\n", result);
+
+    return 0;
+}
