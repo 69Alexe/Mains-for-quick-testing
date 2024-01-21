@@ -1,0 +1,80 @@
+Ex 00:
+
+#include <stdio.h>
+
+int main()
+{
+	char	string[] = "rotules chaudes";
+	int longeure = ft_strlen(string);
+
+	printf("nombre de characteres: %d\n", longeure);
+	return 0;
+}
+
+int	main(void)
+{
+	char	*str = "rotule";
+	
+	ft_putstr(str);
+	return (0);
+}
+
+Ex 01;
+
+Ex 02;
+
+#include <unistd.h>
+
+int main()
+{
+    // Test cases
+    int number1 = 12345;
+    int number2 = -9876;
+    int number3 = -2147483648;
+
+    // Testing ft_putnbr function
+    write(1, "Number 1: ", 11);
+    ft_putnbr(number1);
+    write(1, "\n", 1);
+
+    write(1, "Number 2: ", 11);
+    ft_putnbr(number2);
+    write(1, "\n", 1);
+
+    write(1, "Number 3: ", 11);
+    ft_putnbr(number3);
+    write(1, "\n", 1);
+
+    return 0;
+}
+
+Ex03;
+
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+		printf("converti: %d\n", ft_atoi(argv[1]));
+	}
+	return(0);
+}
+
+
+
+Ex04;
+
+int main()
+{
+    ft_putnbr_base(2825, "01");
+    ft_putchar('\n');
+    
+    ft_putnbr_base(42, "012");
+    ft_putchar('\n');
+
+    ft_putnbr_base(123, "abcd");
+    ft_putchar('\n');
+
+    return 0;
+}
