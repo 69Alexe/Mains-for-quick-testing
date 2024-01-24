@@ -1,0 +1,95 @@
+Ex00
+
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+	int i;
+	char *dest;
+	
+	i = 0;
+	while (i++, i < argc )
+	{
+		dest = ft_strdup(argv[i]);
+		if (dest != NULL)
+		{
+			printf("Dest = %s\n", dest);
+			free(dest);
+		}
+		else
+		{
+			printf("failed. \n");
+		}
+	}
+	return(0);
+}
+
+Ex01
+
+#include <stdio.h>
+
+int main()
+{
+    int min = -4;
+    int max = 19;
+	int i;
+
+    int *result = ft_range(min, max);
+
+	for (i = 0; i < max - min; i++)
+    {
+        printf("%d ", result[i]);
+    }
+	free(result);
+	return (0);
+}
+
+Ex02
+
+#include <stdio.h>
+
+int main()
+{
+    int *result;
+    int size;
+    int min = 1977;
+    int max = -2567;
+
+    size = ft_ultimate_range(&result, min, max);
+
+    if (size >= 0)
+    {
+        printf("Array: ");
+        for (int i = 0; i < size; i++)
+        {
+            printf("%d ", result[i]);
+        }
+		printf("%d\n", size);
+        free(result);
+    }
+    else
+    {
+        printf("Invalid range\n");
+    }
+
+    return 0;
+}
+
+Ex03
+
+#include <stdio.h>
+
+int main()
+{
+    char *strings[] = {"Hello", "World"};
+	char *separator = "";
+    int size = 2;
+	char *tester = ft_strjoin(size, strings, separator);
+
+    printf("Result: %s\n", tester);
+	free(tester);
+
+    return 0;
+}
+
+
